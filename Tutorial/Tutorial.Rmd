@@ -80,9 +80,11 @@ There are multiple ways to make edits to a GitHub repository. Try out these thre
     
     - Type `git pull` (you haven't done anything that needs to be pulled, but it's a good practice to pull before pushing in case of changes)
     
-    - Type `git add README.md` # ctrl + alt+ enter to add code line to Terminal
+    - Type `git add README.md` # ctrl + alt+ enter to add code line to Terminal 
+        - LP try: `git add Tutorial.Rmd` does not work. need to specify the folder
+        - LP try2: `git add Tutorial/Tutorial.Rmd` works
     
-    - Type `git commit -m 'changed date in the readme file'`
+    - Type `git commit -m 'changed a few notes on the Tutorial file'`
     
     - Type `git push`
     
@@ -116,19 +118,20 @@ If you have an HPCC account, open up a second terminal window.
 - Log onto the HPCC by typing `ssh -XY YourNetID@hpcc.msu.edu`. Note the hpcc.msu.edu instead of your regular email, and replace YourNetID with your own net ID. For example, I type: 
     
 ```{bash}
-ssh -XY leuenbe9@hpcc.msu.edu
+ssh -XY petrila1@hpcc.msu.edu
 ```
  
 - Type your MSU password. It's the same as your email. You won't be able to see the letters as you type. You can also put your password in the bash chunk and press `Ctrl + Alt + Enter`, but be careful to delete the password afterwards/keep it secure. 
 
 - Go to one of the development nodes. I use either `dev-intel16` or `dev-intel18`. Go for whichever has lower usage in parentheses. 
+  - LP: I could not find the usage in parentheses
 
 ```{bash}
 ssh dev-intel16
 ssh dev-intel18
 ```
 
-## Navigate to your mapped drive
+## Navigate to your mapped drive [LP: this does not work for me, I cannot map my drive]
 
 - Open another terminal. 
 
@@ -293,7 +296,7 @@ sq
 
 The number that it tells you is the job ID. This number can help you keep track of your jobs and look at the output file that the job produces. Take a look here, but change the number to match your job number
 ```{bash}
-cat slurm-33085536.out
+cat slurm-33359638.out
 ```
 
 You can see the model output and the saved model name here. Take a look in the repo.
@@ -319,3 +322,7 @@ reportseff -u YourNetID
 reportseff -u leuenbe9
 ```
 
+## Laís random notes
+I can run basically all the code from here using the Terminal from OnDemand
+I can pull and push code as well. It is just harder to push changes given that I cannot open the RStudio there without the OnDemand (I don't know hwo to change file content in the Terminal, and might not need to do so)
+I can also send jobs through the Terminal following the steps in this tutorial
