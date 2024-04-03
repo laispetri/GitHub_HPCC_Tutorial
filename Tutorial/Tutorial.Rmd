@@ -70,7 +70,7 @@ There are multiple ways to make edits to a GitHub repository. Try out these thre
     
     - Close the Git window and go to the repository in your web browser. Refresh and the date that you added will show up. 
     
-3. In RStudio, using command line. 
+3. In RStudio, using command line. [LP: this works!!!]
 
     - Go back to your README.md in RStudio. 
     
@@ -80,9 +80,9 @@ There are multiple ways to make edits to a GitHub repository. Try out these thre
     
     - Type `git pull` (you haven't done anything that needs to be pulled, but it's a good practice to pull before pushing in case of changes)
     
-    - Type `git add README.md`
+    - Type `git add README.md` # ctrl + alt+ enter to add code line to Terminal
     
-    - Type `git commit -m 'Added favorite animal'`
+    - Type `git commit -m 'changed date in the readme file'`
     
     - Type `git push`
     
